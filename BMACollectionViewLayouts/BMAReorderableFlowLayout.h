@@ -1,24 +1,47 @@
-# BMACollectionViewLayouts
+/*
+ The MIT License (MIT)
+ 
+ Copyright (c) 2014-present Badoo Trading Limited.
+ 
+ Permission is hereby granted, free of charge, to any person obtaining a copy
+ of this software and associated documentation files (the "Software"), to deal
+ in the Software without restriction, including without limitation the rights
+ to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+ copies of the Software, and to permit persons to whom the Software is
+ furnished to do so, subject to the following conditions:
+ 
+ The above copyright notice and this permission notice shall be included in
+ all copies or substantial portions of the Software.
+ 
+ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+ IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+ FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+ THE SOFTWARE.
+ */
 
-A set of UICollectionView subclasses for all your layouting needs.
+@import UIKit;
 
-##Installing
-You can use cocoapods, importing BMACollectionViewLayouts:
-```ruby
-pod 'BMACollectionViewLayouts'
-```
+/*!
+ @abstract Flow layout allowing for reordering of cells in collection.
+ 
+ @discussion
+ The behaviour can be customised by responding to the additional delegate methods for this layout
 
-You can also import this repository as a submodule and use the classes under 'Source' subdirectory.
+ For this layout to work, you need to support NSCopying protocol in your cells. This is due to
+ the cell being copied when selected. Thus if you don't support NSCopying, the code will crash with an
+ appropiate error message.
+ */
+@interface BMAReorderableFlowLayout : UICollectionViewFlowLayout
 
-##The Layouts
-There is only one layout at the moment, but more are coming :rocket:
+@end
 
-##BMAReorderableFlowLayout
-This is a flow layout subclass, and allows user to drag and drop the elements inside the collection view.
+typedef void (^BMAReorderingAnimationBlock)(UICollectionViewCell *draggedCell);
 
-The layout gives callbacks for all events in time during this interaction, and lets you control if the whole reordering is available for a single or all cells.
-
-```objectivec
+@protocol BMAReorderableDelegateFlowLayout <UICollectionViewDelegateFlowLayout>
+@optional
 /// Return YES if the item can be dragged. Default assumed NO.
 - (BOOL)collectionView:(UICollectionView *)collectionView canDragItemAtIndexPath:(NSIndexPath *)indexPath;
 
@@ -40,38 +63,10 @@ The layout gives callbacks for all events in time during this interaction, and l
 /// Notifies that a cell previously dragged has been dropped to it's destination. Called after all animations.
 - (void)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout didEndDraggingItemAtIndexPath:(NSIndexPath *)indexPath;
 
-```
-
-A useful feature is the ability to hook in the animation of the actual cell being dragged. It is generally necessary to indicate visually that the collection view is letting the user to drag the cell, but the design should be up to you. So there are two callbacks you can implement for that effect:
-
-```objectivec
 /// Gives possibility to customise the animation of the cell when it's selected for dragging
 - (BMAReorderingAnimationBlock)animationForDragBeganInCollectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout;
 
 /// Gives possibility to customise the animation of the cell when it's dropped after dragging
 - (BMAReorderingAnimationBlock)animationForDragEndedInCollectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout;
 
-```
-
-An example of a simple pop-out animation:
-```objectivec
-- (BMAReorderingAnimationBlock)animationForDragBeganInCollectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout {
-    return ^(UICollectionViewCell *draggedView){
-        draggedView.transform = CGAffineTransformMakeScale(1.3, 1.3);
-    };
-}
-
-- (BMAReorderingAnimationBlock)animationForDragEndedInCollectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout {
-    return ^(UICollectionViewCell *draggedView){
-        draggedView.transform = CGAffineTransformIdentity;
-    };
-}
-```
-
-And how it looks like:
-
-![image](demoimages/popinreorder.gif)
-
-###Important
-
-The layout needs to copy the cell in order to create a view it can move around. It does this instead of creating the snapshot, as you may want to reconfigure your cell for dragging before it actually moves. So you need to implement NSCopying in your cell and return a valid copy.
+@end

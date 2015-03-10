@@ -1,0 +1,14 @@
+PODS:
+  - BMACollectionViewLayouts (1.0.0)
+
+DEPENDENCIES:
+  - BMACollectionViewLayouts (from `..`)
+
+EXTERNAL SOURCES:
+  BMACollectionViewLayouts:
+    :path: ..
+
+SPEC CHECKSUMS:
+  BMACollectionViewLayouts: a1f5c9ddb880597f1b77fd0f1954abd2c0dafa7e
+
+COCOAPODS: 0.35.0
