@@ -100,7 +100,7 @@
 
 - (BMAReorderingAnimationBlock)animationForDragBeganInCollectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout {
     return ^(UICollectionViewCell *draggedView){
-        draggedView.transform = CGAffineTransformMakeScale(1.3, 1.3);
+        draggedView.transform = CGAffineTransformMakeScale(1.3f, 1.3f);
         [collectionView bma_overlayView].alpha = 0.5;
     };
 }
