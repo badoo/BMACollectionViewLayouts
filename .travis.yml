@@ -1,4 +1,5 @@
 language: objective-c
-xcode_workspace: Demo.xcworkspace
+xcode_workspace: Demo/Demo.xcworkspace
 xcode_scheme: Demo
 xcode_sdk: iphonesimulator8.1
+podfile: Demo/Podfile
