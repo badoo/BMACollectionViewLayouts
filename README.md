@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/badoo/BMACollectionViewLayouts.svg?branch=master)](https://travis-ci.org/badoo/BMACollectionViewLayouts)
+
 # BMACollectionViewLayouts
 
 A set of UICollectionView subclasses for all your layouting needs.
