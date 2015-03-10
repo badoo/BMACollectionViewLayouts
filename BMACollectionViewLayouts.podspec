@@ -22,7 +22,7 @@ Pod::Spec.new do |s|
   s.license      = { :type => "MIT" }
   s.author       = { "Miguel Angel Quinones" => "m.quinones.garcia@gmail.com" }
   s.platform     = :ios, "7.0"
-  s.source       = { :git => "https://github.com/badoo/BMACollectionViewLayouts", :tag => s.version.to_s }
+  s.source       = { :git => "https://github.com/badoo/BMACollectionViewLayouts.git", :tag => s.version.to_s }
   s.source_files  = "BMACollectionViewLayouts/**/*.{h,m}"
   s.public_header_files = "BMACollectionViewLayouts/**/*.h"
   s.requires_arc = true
