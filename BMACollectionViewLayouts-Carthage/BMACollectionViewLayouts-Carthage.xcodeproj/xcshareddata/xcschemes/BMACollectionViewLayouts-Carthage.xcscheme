@@ -15,8 +15,8 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "0B8BD5B820235EAB00B4C797"
-               BuildableName = "BMACollectionViewLayouts_Carthage.framework"
-               BlueprintName = "BMACollectionViewLayouts-Carthage"
+               BuildableName = "BMACollectionViewLayouts.framework"
+               BlueprintName = "BMACollectionViewLayouts"
                ReferencedContainer = "container:BMACollectionViewLayouts-Carthage.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -48,8 +48,8 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "0B8BD5B820235EAB00B4C797"
-            BuildableName = "BMACollectionViewLayouts_Carthage.framework"
-            BlueprintName = "BMACollectionViewLayouts-Carthage"
+            BuildableName = "BMACollectionViewLayouts.framework"
+            BlueprintName = "BMACollectionViewLayouts"
             ReferencedContainer = "container:BMACollectionViewLayouts-Carthage.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
@@ -66,8 +66,8 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "0B8BD5B820235EAB00B4C797"
-            BuildableName = "BMACollectionViewLayouts_Carthage.framework"
-            BlueprintName = "BMACollectionViewLayouts-Carthage"
+            BuildableName = "BMACollectionViewLayouts.framework"
+            BlueprintName = "BMACollectionViewLayouts"
             ReferencedContainer = "container:BMACollectionViewLayouts-Carthage.xcodeproj">
          </BuildableReference>
       </MacroExpansion>

@@ -7,14 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0B8BD5BE20235EAB00B4C797 /* BMACollectionViewLayouts_Carthage.h in Headers */ = {isa = PBXBuildFile; fileRef = 0B8BD5BC20235EAB00B4C797 /* BMACollectionViewLayouts_Carthage.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0B8BD5BE20235EAB00B4C797 /* BMACollectionViewLayouts.h in Headers */ = {isa = PBXBuildFile; fileRef = 0B8BD5BC20235EAB00B4C797 /* BMACollectionViewLayouts.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		0B8BD5C720235EB600B4C797 /* BMAReorderableFlowLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B8BD5C520235EB600B4C797 /* BMAReorderableFlowLayout.m */; };
 		0B8BD5C820235EB600B4C797 /* BMAReorderableFlowLayout.h in Headers */ = {isa = PBXBuildFile; fileRef = 0B8BD5C620235EB600B4C797 /* BMAReorderableFlowLayout.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		0B8BD5B920235EAB00B4C797 /* BMACollectionViewLayouts_Carthage.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = BMACollectionViewLayouts_Carthage.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		0B8BD5BC20235EAB00B4C797 /* BMACollectionViewLayouts_Carthage.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BMACollectionViewLayouts_Carthage.h; sourceTree = "<group>"; };
+		0B8BD5B920235EAB00B4C797 /* BMACollectionViewLayouts.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = BMACollectionViewLayouts.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		0B8BD5BC20235EAB00B4C797 /* BMACollectionViewLayouts.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BMACollectionViewLayouts.h; sourceTree = "<group>"; };
 		0B8BD5BD20235EAB00B4C797 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0B8BD5C520235EB600B4C797 /* BMAReorderableFlowLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BMAReorderableFlowLayout.m; sourceTree = "<group>"; };
 		0B8BD5C620235EB600B4C797 /* BMAReorderableFlowLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BMAReorderableFlowLayout.h; sourceTree = "<group>"; };
@@ -43,7 +43,7 @@
 		0B8BD5BA20235EAB00B4C797 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				0B8BD5B920235EAB00B4C797 /* BMACollectionViewLayouts_Carthage.framework */,
+				0B8BD5B920235EAB00B4C797 /* BMACollectionViewLayouts.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -51,7 +51,7 @@
 		0B8BD5BB20235EAB00B4C797 /* BMACollectionViewLayouts-Carthage */ = {
 			isa = PBXGroup;
 			children = (
-				0B8BD5BC20235EAB00B4C797 /* BMACollectionViewLayouts_Carthage.h */,
+				0B8BD5BC20235EAB00B4C797 /* BMACollectionViewLayouts.h */,
 				0B8BD5BD20235EAB00B4C797 /* Info.plist */,
 			);
 			path = "BMACollectionViewLayouts-Carthage";
@@ -74,7 +74,7 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0B8BD5BE20235EAB00B4C797 /* BMACollectionViewLayouts_Carthage.h in Headers */,
+				0B8BD5BE20235EAB00B4C797 /* BMACollectionViewLayouts.h in Headers */,
 				0B8BD5C820235EB600B4C797 /* BMAReorderableFlowLayout.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -82,9 +82,9 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		0B8BD5B820235EAB00B4C797 /* BMACollectionViewLayouts-Carthage */ = {
+		0B8BD5B820235EAB00B4C797 /* BMACollectionViewLayouts */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 0B8BD5C120235EAB00B4C797 /* Build configuration list for PBXNativeTarget "BMACollectionViewLayouts-Carthage" */;
+			buildConfigurationList = 0B8BD5C120235EAB00B4C797 /* Build configuration list for PBXNativeTarget "BMACollectionViewLayouts" */;
 			buildPhases = (
 				0B8BD5B420235EAB00B4C797 /* Sources */,
 				0B8BD5B520235EAB00B4C797 /* Frameworks */,
@@ -95,9 +95,9 @@
 			);
 			dependencies = (
 			);
-			name = "BMACollectionViewLayouts-Carthage";
+			name = BMACollectionViewLayouts;
 			productName = "BMACollectionViewLayouts-Carthage";
-			productReference = 0B8BD5B920235EAB00B4C797 /* BMACollectionViewLayouts_Carthage.framework */;
+			productReference = 0B8BD5B920235EAB00B4C797 /* BMACollectionViewLayouts.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
@@ -127,7 +127,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				0B8BD5B820235EAB00B4C797 /* BMACollectionViewLayouts-Carthage */,
+				0B8BD5B820235EAB00B4C797 /* BMACollectionViewLayouts */,
 			);
 		};
 /* End PBXProject section */
@@ -314,7 +314,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		0B8BD5C120235EAB00B4C797 /* Build configuration list for PBXNativeTarget "BMACollectionViewLayouts-Carthage" */ = {
+		0B8BD5C120235EAB00B4C797 /* Build configuration list for PBXNativeTarget "BMACollectionViewLayouts" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				0B8BD5C220235EAB00B4C797 /* Debug */,
